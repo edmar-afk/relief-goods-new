@@ -3,7 +3,7 @@ import { Text, View, Pressable, Image } from "react-native";
 import { router } from "expo-router";
 import Header from "./homepage/Header";
 import logo from "../assets/images/logo.jpg";
-import { getUserInfo } from "../utils/storage";
+// import { getUserInfo } from "../utils/storage";
 import React, { useEffect, useState } from "react";
 
 const Topbar = () => {
@@ -11,7 +11,7 @@ const Topbar = () => {
 
   useEffect(() => {
     const loadUser = async () => {
-      const storedUser = await getUserInfo();
+      const storedUser = 'await getUserInfo()';
       setUser(storedUser);
     };
     loadUser();

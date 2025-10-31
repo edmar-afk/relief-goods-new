@@ -10,7 +10,7 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 import Topbar from "../../components/Topbar";
 import logo from "../../assets/images/logo.jpg";
-import { getUserInfo } from "../../utils/storage";
+// import { getUserInfo } from "../../utils/storage";
 import api from "../../utils/api";
 import React, { useState, useEffect } from "react";
 import * as FileSystem from "expo-file-system";
@@ -24,7 +24,7 @@ export default function Profile() {
 
   const fetchProfile = async () => {
     try {
-      const storedUser = await getUserInfo();
+      const storedUser = 'sample';
       if (storedUser?.id) {
         const res = await api.get(`/profile/${storedUser.id}/`);
         setUser(res.data);

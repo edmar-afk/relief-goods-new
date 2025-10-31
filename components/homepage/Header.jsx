@@ -1,7 +1,7 @@
 import { View, Text, Pressable } from "react-native";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "expo-router";
-import { getUserInfo, removeUserInfo } from "../../utils/storage";
+// import { getUserInfo, removeUserInfo } from "../../utils/storage";
 
 const Header = () => {
   const router = useRouter();
@@ -9,7 +9,7 @@ const Header = () => {
 
   useEffect(() => {
     const loadUser = async () => {
-      const storedUser = await getUserInfo();
+      const storedUser = 'await getUserInfo();'
       //console.log("Loaded userInfo from storage:", storedUser); // ✅ see what we get
       setUser(storedUser);
     };
